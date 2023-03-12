@@ -33,9 +33,17 @@ node2-start:
 
 node1-stop:
 	@echo "Stopping node1"
-	@docker-compose -f node1/docker-compose.yaml down
+	@docker-compose -f node1/docker-compose.yaml stop
 
 node2-stop:
+	@echo "Stopping node2"
+	@docker-compose -f node2/docker-compose.yaml stop
+
+node1-down:
+	@echo "Stopping node1"
+	@docker-compose -f node1/docker-compose.yaml down
+
+node2-down:
 	@echo "Stopping node2"
 	@docker-compose -f node2/docker-compose.yaml down
 
